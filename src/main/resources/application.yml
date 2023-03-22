@@ -1,17 +1,24 @@
 spring:
   datasource:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:/Users/smile/Desktop/ToolApi/db/tool_api_test
+    url: jdbc:h2:file:E:/db/tool_api_test
+    #    url: jdbc:h2:file:../db/tool_api
     username: root
     password: 123456
   h2:
     console:
       path: /h2-console
       enabled: true
+      settings:
+        webAllowOthers: true
   mvc:
     throw-exception-if-no-handler-found: true
   resources:
     add-mappings: false
+#  sql:
+#    init:
+#      schema-locations: classpath:db/schema-h2.sql
+#      platform: h2
 server:
   port: 10521
 wx:
